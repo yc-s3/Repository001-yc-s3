@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<!-- 页面模块  -->
+<title>公共页面</title>
+</head>
+<body>
+	<!-- 页头 -->
+	<div class="header-outs" id="home" th:fragment="commhead">
+		<div class="header-bar">
+			<div class="info-top-grid">
+				<div class="info-contact-agile">
+					<ul>
+						<li><span class="fas fa-phone-volume"></span>
+							<p>+(000)123 4565 32</p></li>
+						<li><span class="fas fa-envelope"></span>
+							<p>
+								<a href="mailto:info@example.com">info@example1.com</a>
+							</p></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="hedder-up row">
+					<div class="col-lg-3 col-md-3 logo-head">
+						<h1>
+							<a class="navbar-brand" href="index.html">玩具店</a>
+						</h1>
+					</div>
+					<div class="col-lg-5 col-md-6 search-right">
+						<form class="form-inline my-lg-0">
+							<input class="form-control mr-sm-2" type="search"
+								placeholder="搜索">
+							<button class="btn" type="submit">搜索</button>
+						</form>
+					</div>
+
+					<div>
+						<br /> <a href="tologin">登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+
+						<a href="toregister">注册</a>
+					</div>
+
+				</div>
+			</div>
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-center"
+					id="navbarSupportedContent">
+					<ul class="navbar-nav ">
+						<li class="nav-item active"><a class="nav-link"
+							href="toindex">主页 <span class="sr-only">(current)</span></a></li>
+
+						<li class="nav-item"><a href="toshop" class="nav-link">现在去购物</a>
+						</li>
+						<li class="nav-item dropdown"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> 预留页面 </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="nav-link" href="toerror">404 Page</a>
+							</div></li>
+						<li class="nav-item"><a href="toabout" class="nav-link">关于</a>
+						</li>
+						<li class="nav-item"><a href="tocheckout" class="nav-link">购物车</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+
+
+</body>
+</html>
