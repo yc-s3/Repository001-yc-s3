@@ -4,7 +4,7 @@
 #server.port.b=true
 
 # 自定义的配置参数
-myUploadPath: d:/c76_toyshop/
+#myUploadPath: d:/c76_toyshop/
 
 server:
    port: 80
