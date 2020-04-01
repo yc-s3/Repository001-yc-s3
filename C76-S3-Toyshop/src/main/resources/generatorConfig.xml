@@ -19,17 +19,17 @@
 
 		<!-- 实体类包名 -->
 		<javaModelGenerator
-			targetPackage="com.yc.toshop.bean" targetProject="src/main/java">
+			targetPackage="com.yc.toyshop.bean" targetProject="src/main/java">
 			<!-- 字符串属性加入 trim 函数 -->
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 		<!-- Dao类包名 -->
-		<sqlMapGenerator targetPackage="com.yc.toshop.dao"
+		<sqlMapGenerator targetPackage="com.yc.toyshop.dao"
 			targetProject="src/main/java">
 		</sqlMapGenerator>
 
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.yc.toshop.dao" targetProject="src/main/java">
+			targetPackage="com.yc.toyshop.dao" targetProject="src/main/java">
 		</javaClientGenerator>
 
 

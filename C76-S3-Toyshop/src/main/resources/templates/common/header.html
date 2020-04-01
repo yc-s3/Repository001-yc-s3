@@ -38,9 +38,9 @@
 					</div>
 
 					<div>
-						<br /> <a href="tologin">登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						<br /> <a href="tologin" th:text="${session.loginedUser}==null?'登录':(${session.loginedUser.username})">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
 
-						<a href="toregister">注册</a>
+					&nbsp;&nbsp;&nbsp;<a href="toregister">注册</a>
 					</div>
 
 				</div>

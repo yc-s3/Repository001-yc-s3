@@ -5,11 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Badge Signup Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-
+	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="js/easyform.js"></script>
     <!-- Custom Theme files -->
     <link href="css/style_01.css" rel="stylesheet" type="text/css" media="all" />
     <!-- //Custom Theme files -->
+	<script type="text/javascript">
+	function reg() {
+		var formData = new FormData(regform);
 
+		$.ajax({
+			url : 'toregister', /*接口域名地址*/
+			type : 'post',
+			data : formData,
+			contentType : false,
+			processData : false,
+			  success: function (result) {
+                  console.log(result);//打印服务端返回的数据(调试用)
+                  if (result.resultCode == 200) {
+                      alert("SUCCESS");
+                  }
+                  ;
+              },
+              error : function() {
+                  alert("异常！");
+              }
+          });
+      }
+	</script>
 </head>
 <body>
     <!-- main -->
@@ -17,19 +40,19 @@
         <h1>欢迎注册</h1>
         <div class="agilesign-form">
             <div class="agileits-top">
-                <form action="#" method="post">
+                <form id="regform" action="#" method="post">
                     <div class="styled-input w3ls-text">
-                        <input type="text" name="用户名" required="" />
+                        <input type="text" name="loginname" easyform="length:4-16;char-normal;real-time;" message="用户名必须为4—16位的英文字母或数字" easytip="disappear:lost-focus;theme:blue;" ajax-message="用户名已存在!"/>
                         <label>用户名</label>
                         <span></span>
                     </div>
                     <div class="styled-input w3ls-text">
-                        <input type="text" name="email" required="" />
+                        <input type="text" name="email" easyform="email;real-time;" message="Email格式要正确" easytip="disappear:lost-focus;theme:blue;" ajax-message="这个Email地址已经被注册过，请换一个吧!" />
                         <label>Email</label>
                         <span></span>
                     </div>
                     <div class="styled-input w3ls-text">
-                        <input type="password" name="密码" required="">
+                        <input type="password" name="password" easyform="length:6-16;" message="密码必须为6—16位" easytip="disappear:lost-focus;theme:blue;">
                         <label>密码</label>
                         <span></span>
                     </div>
